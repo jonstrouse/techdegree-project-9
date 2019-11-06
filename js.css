@@ -12,14 +12,15 @@ header {
   color: white;
   display: flex;
   flex-direction: row;
-  width: 80%;
+  width: 90%;
   margin: auto;
 }
 header img {
-  width: 50px;
-  height: 50px;
+  width: 40px;
+  height: 40px;
 }
 header h2 {
+  font-size: 1.2em;
   margin: auto .5em;
   font-weight: 100;
   letter-spacing: .2em;
@@ -34,8 +35,8 @@ header h2 span {
 }
 .exit-menu {
   position: absolute;
-  right: 10%;
-  top: -4px;
+  right: 5%;
+  top: 6px;
   color: white;
   font-size: 3em;
   font-weight: 200;
@@ -46,8 +47,8 @@ header h2 span {
 }
 .menu {
   position: absolute;
-  right: 10%;
-  top: -20px;
+  right: 5%;
+  top: -10px;
   padding: 5em 4em 2em;
   border-radius: 30px 0 30px 30px;;
   background-color: grey;
@@ -60,7 +61,7 @@ header h2 span {
   transition: .5s ease;
 }
 .menu-link li {
-  margin: 1.5em .75em;
+  margin: 1.5em .5em;
 }
 .menu-link:hover {
   color: orange;
@@ -146,7 +147,7 @@ button:hover {
 
 .skill p {
   padding: 0 2em;
-  font-size: 1.5em;
+  font-size: 1.2em;
 }
 .skill ul {
   list-style: none;
@@ -156,7 +157,7 @@ button:hover {
 }
 .skill li {
   margin-bottom: .7em;
-  font-size: 1.5em;
+  font-size: 1.2em;
 }
 
 /* ########################## */
@@ -211,10 +212,12 @@ button:hover {
 .web-link {
   background-color: white;
   border-radius: 2em;
+  height: 300px;
 }
 .web-link h1 {
+  font-size: 1.5em;
   background-color: darkorange;
-  margin: 0;
+  margin: 0 0 .5em;
   padding: 1em;
 }
 
@@ -231,7 +234,6 @@ button:hover {
 }
 
 .backdrop {
-  height: 500px;
   background-image: url("images/website.png");
   background-position: center;
   background-size: cover;
@@ -239,7 +241,6 @@ button:hover {
 }
 
 .gallery {
-  height: 500px;
   background-image: url("images/gallery.png");
   background-position: bottom;
   background-size: cover;
@@ -247,14 +248,21 @@ button:hover {
 }
 
 .registration {
-  height: 500px;
   background-image: url("images/registration.png");
   background-position: bottom;
   background-size: cover;
   background-repeat: no-repeat;
 }
 
+.footnote {
+  font-size: 1.5em;
+  background-color: darkorange;
+  padding: .5em;
+  border-radius: 2em;
+  margin-top: 0;
+}
 
+/* ########################## */
 
 #reviews {
   width: 90%;
@@ -264,11 +272,12 @@ button:hover {
   color: #23272b;
   padding: 1.5em 0;
 }
+
 .quote {
   width: 80%;
   margin: auto;
   color: #23272b;
-  text-align: justify;
+  text-align: left;
   font-size: 1em;
   letter-spacing: .02em;
   font-weight: 100;
@@ -284,22 +293,33 @@ button:hover {
 
 
 /* ########################## */
-#connect {
+footer {
   background-color: lightgrey;
+  padding: 2em;
+}
+#connect {
+  max-width: 80%;
+  margin: auto;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
 }
 #connect div {
   width: 40px;
   border-radius: 10px;
-  margin: 1em 2em;
+  margin: 1em .5em;
+}
+#connect img {
+  width: 40px;
 }
 
 .footer-menu {
-  width: 50%;
+  width: 30%;
   margin: auto;
-  padding: 1em 0 2em;
+  padding: 2em 0 2em;
   list-style: none;
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   align-items: center;
   justify-content: space-between;
   text-decoration: none;
@@ -307,11 +327,84 @@ button:hover {
 }
 .footer-link {
   text-decoration: none;
-  /* padding: 1em 2em; */
+  margin: .5em;
   color: #23272b;
   font-size: 1.3em;
   transition: .1s ease;
 }
 .footer-link:hover {
   color: darkorange;
+}
+
+
+@media screen and (min-width: 380px) {
+
+  #wheel-logo {
+    width: 70%;
+  }
+}
+
+@media screen and (min-width: 750px) {
+
+  header {
+    width: 80%;
+    align-items: center;
+  }
+  .min-menu,
+  .exit-menu {
+    display: none;
+  }
+  .menu-container {
+    display: flex;
+    justify-content: flex-end;
+    width: 100%;
+    margin: auto;
+  }
+  .menu {
+    display: flex;
+    flex-direction: row;
+    position: relative;
+    margin-top: 2.2em;
+    padding: 0;
+    border-radius: 0;
+    background-color: inherit;
+  }
+  .menu-link {
+    font-size: 1.3em;
+    margin: 1.5em .25em;
+  }
+
+  .thumbnail-container {
+    flex-direction: row;
+  }
+  .thumbnail {
+    width: 40%;
+  }
+  .web-link {
+    height: 250px;
+  }
+  #connect {
+    max-width: 50%;
+  }
+
+}
+
+@media screen and (min-width: 1040px) {
+
+  #skills {
+    display: flex;
+    flex-direction: row;
+  }
+
+  #projects {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+  }
+  .project {
+    width: 45%;
+    margin: 1em 0;
+  }
+
+
 }

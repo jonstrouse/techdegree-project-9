@@ -4,6 +4,8 @@ const menu = document.querySelector('.menu-container');
 const exit = document.querySelector('.exit-menu');
 const menuLink = document.querySelectorAll('.menu-link');
 
+const mq = window.matchMedia( "(min-width: 750px)" );
+
 
 function closeMenu() {
   menu.style.display = 'none';
@@ -19,6 +21,9 @@ exit.addEventListener('click', (event) => {
 
 for (const link of menuLink) {
   link.addEventListener('click', (event) => {
-    closeMenu();
+    if (mq.matches) {
+    } else {
+      closeMenu()
+    }
   });
 };
