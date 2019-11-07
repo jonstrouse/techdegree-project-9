@@ -159,15 +159,27 @@ button:hover {
   margin-bottom: .7em;
   font-size: 1.2em;
 }
+.skill img {
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  padding: 2em;
+  display: none;
+}
 
 /* ########################## */
 #projects {
-  padding: 2.5em 0;
+  padding-bottom: 1.5em;
   width: 100%;
   background-color: white;
 }
-.project {
+.web-div {
   background-color: #23272b;
+}
+.design-div h1 {
+  color: #23272b;
+}
+.project {
   width: 90%;
   max-width: 550px;
   margin: 2em auto;
@@ -183,7 +195,6 @@ button:hover {
   align-items: center;
 }
 .thumbnail {
-  overflow: hidden;
   align-self: center;
   width: 80%;
   height: auto;
@@ -209,30 +220,31 @@ button:hover {
 }
 
 /* ########################## */
-.web-link {
-  background-color: white;
-  border-radius: 2em;
-  height: 300px;
-}
-.web-link h1 {
-  font-size: 1.5em;
-  background-color: darkorange;
-  margin: 0 0 .5em;
-  padding: 1em;
-}
-
-#wheel-logo {
+.thumbnail-web {
+  align-self: center;
   width: 80%;
-  margin: -30px -10px -30px 0;
-}
-#wheel-logo:hover #color-wheel {
-  transform: rotate(180deg);
-}
-#color-wheel {
-  transform-origin: 168.5px 251.5px;
-  transition: .75s ease-in-out;
+  height: auto;
+  margin: 1em;
 }
 
+.web-link {
+  height: 200px;
+  width: 90%;
+  margin: auto;
+  border-radius: 2em;
+}
+.thumbnail-web h1 {
+  font-size: 1.5em;
+  margin: auto;
+  padding: .5em;
+}
+.wheel {
+  background-color: white;
+  background-image: url("images/wheel-logo.png");
+  background-position: center;
+  background-size: contain;
+  background-repeat: no-repeat;
+}
 .backdrop {
   background-image: url("images/website.png");
   background-position: center;
@@ -255,11 +267,8 @@ button:hover {
 }
 
 .footnote {
-  font-size: 1.5em;
-  background-color: darkorange;
-  padding: .5em;
-  border-radius: 2em;
-  margin-top: 0;
+  font-size: 2em;
+  margin-top: 3em;
 }
 
 /* ########################## */
@@ -298,7 +307,8 @@ footer {
   padding: 2em;
 }
 #connect {
-  max-width: 80%;
+  width: 80%;
+  max-width: 400px;
   margin: auto;
   display: flex;
   flex-direction: row;
@@ -345,8 +355,11 @@ footer {
 }
 
 @media screen and (min-width: 750px) {
-
+  body {
+    padding-top: 0;
+  }
   header {
+    margin-top: -1em;
     width: 80%;
     align-items: center;
   }
@@ -380,31 +393,77 @@ footer {
   .thumbnail {
     width: 40%;
   }
+  .thumbnail:hover {
+    transform: scale(1.2);
+  }
+  .thumbnail-web h1 {
+    font-size: 2em;
+  }
   .web-link {
-    height: 250px;
+    height: 300px;
+    transition: .5s ease;
   }
-  #connect {
-    max-width: 50%;
+  .web-link:hover {
+    transform: scale(1.05);
   }
+
 
 }
 
-@media screen and (min-width: 1040px) {
+@media screen and (min-width: 1024px) {
 
+  header {
+    max-width: 1200px;
+  }
+  .about {
+    max-width: 900px;
+    margin: auto;
+  }
   #skills {
     display: flex;
     flex-direction: row;
+    width: 90%;
+    margin: auto;
   }
-
-  #projects {
-    display: flex;
-    flex-direction: row;
+  .skill {
+    width: 30%;
     justify-content: space-around;
   }
+  .skill h1,
+  .skill p {
+    padding: 1em;
+  }
+  .skill img {
+    display: initial;
+  }
   .project {
-    width: 45%;
-    margin: 1em 0;
+    max-width: 1200px;
+    margin: 1em auto;
+  }
+  .thumbnail {
+    width: 25%;
   }
 
+  .thumbnail-web {
+    width: 40%;
+    max-width: 500px;
+
+  }
 
 }
+
+
+/* code for making svg wheel rotate */
+/* #wheel-logo {
+}
+#wheel-logo:hover #color-wheel {
+  transform: rotate(180deg);
+}
+#color-wheel {
+  transform-origin: 168.5px 251.5px;
+  transition: .75s ease-in-out;
+}
+#wheel-text .cls-9,
+#wheel-text .cls-10 {
+  fill: white;
+} */
